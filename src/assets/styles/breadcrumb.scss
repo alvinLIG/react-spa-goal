@@ -1,0 +1,38 @@
+.breadcrumb {
+  background-color: $color-gray;
+  padding: 27px 0;
+}
+
+.breadcrumb-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.breadcrumb-item {
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  position: relative;
+
+  &:not(:last-child) {
+    margin-right: 38px;
+
+    &:after {
+      content: '>';
+      display: inline-block;
+      font-family: $base-font-family;
+      font-size: 16px;
+      font-weight: 300;
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(-50%);
+    }
+  }
+
+  a {
+    color: $base-font-color;
+  }
+}

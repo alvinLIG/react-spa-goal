@@ -1,0 +1,54 @@
+.posts {
+  font-family: $font-montserrat;
+  font-weight: bold;
+  margin-top: 98px;
+}
+
+.posts-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.posts-heading {
+  font-size: 50px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.posts-text {
+  font-size: 20px;
+  color: $base-font-color;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  border-bottom: 1px solid $base-font-color;
+  transition: border-bottom-color $duration $easing;
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.posts-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 65px -25px 0;
+}
+
+.posts-item {
+  flex-basis: 33.33%;
+  max-width: 33.33%;
+  padding: 0 25px;
+
+  &:nth-child(n+4) {
+    margin-top: 60px;
+  }
+}
+
+.posts-button {
+  width: 340px;
+  margin: 0 auto;
+}

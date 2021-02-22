@@ -1,0 +1,22 @@
+.text {
+  position: relative;
+}
+
+.text-label {
+  display: block;
+  font-family: $font-montserrat;
+  font-size: 18px;
+  letter-spacing: 0.1em;
+}
+
+.text-input {
+  width: 460px;
+  height: 60px;
+  border: 1px solid $base-font-color;
+  padding: 10px;
+  margin-top: 5px;
+
+  font-family: $font-montserrat;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}

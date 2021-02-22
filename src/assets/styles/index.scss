@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@import './setting';
+@import './layout';
+
+@import './breadcrumb';
+@import './button';
+@import './comment';
+@import './confirm-modal';
+@import './footer';
+@import './header';
+@import './login';
+@import './new-post';
+@import './posts';
+@import './post-card';
+@import './single';
+@import './slider';
+@import './text';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  color: $base-font-color;
+  background-color: $base-background-color;
+}
+
+a {
+  text-decoration: none;
+}
+
+button, input, textarea {
+  -webkit-appearance: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: initial;
+}
+
+textarea {
+  resize: none;
+}

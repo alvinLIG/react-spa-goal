@@ -1,0 +1,74 @@
+.single {
+  margin-top: 65px;
+}
+
+.single-header {
+  position: relative;
+}
+
+.single-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.single-button {
+  font-family: $font-montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  color: $base-font-color;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  border-bottom: 1px solid $base-font-color;
+  transition: border-bottom-color $duration $easing;
+
+  &:last-of-type {
+    margin-left: 50px;
+  }
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.single-date {
+  display: block;
+  font-family: $font-montserrat;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  margin-top: 35px;
+}
+
+.single-heading {
+  font-size: 40px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  line-height: 1.65;
+  margin-top: 30px;
+}
+
+.single-eyecatch {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: percentage(540 / 1120);
+  margin: 38px auto 0;
+}
+
+.single-body {
+  margin-top: 50px;
+
+  p {
+    font-size: 18px;
+    letter-spacing: 0.1em;
+    line-height: 2.25;
+    margin-top: 40px;
+    white-space: pre-line;
+  }
+}
+
+.single-footer {
+  border-top: 1px solid #707070;
+  padding-top: 60px;
+  margin-top: 125px;
+}

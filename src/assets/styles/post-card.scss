@@ -1,0 +1,46 @@
+.post-card {
+  color: $base-font-color;
+  border: 1px solid $base-font-color;
+  padding: 40px 30px 33px;
+
+  &:hover {
+    .post-card-eyecatch {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.post-card-eyecatch-wrapper {
+  overflow: hidden;
+}
+
+.post-card-eyecatch {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: percentage(200 / 280);
+  transform: translate3d(0, 0, 0);
+  transition: transform $duration $easing;
+}
+
+.post-card-content {
+  margin-top: 25px;
+}
+
+.post-card-date {
+  font-family: $font-montserrat;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+}
+
+.post-card-heading {
+  font-family: $base-font-family;
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 1.6;
+
+  max-height: 103px;
+  margin-top: 10px;
+  overflow: hidden;
+}

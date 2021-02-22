@@ -1,0 +1,98 @@
+.new-post {
+  margin-top: 65px;
+}
+
+.new-post-button-wrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.new-post-button {
+  font-family: $font-montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  color: $base-font-color;
+  letter-spacing: 0.1em;
+  line-height: 1;
+  border-bottom: 1px solid $base-font-color;
+  transition: border-bottom-color $duration $easing;
+
+  &:first-of-type {
+    margin-right: 50px;
+  }
+
+  &:hover {
+    border-bottom-color: transparent;
+  }
+}
+
+.new-post-date {
+  display: block;
+  font-family: $font-montserrat;
+  font-size: 20px;
+  letter-spacing: 0.2em;
+  margin-top: 35px;
+}
+
+.new-post-heading,
+.new-post-content {
+  display: block;
+  width: 100%;
+  font-family: $base-font-family;
+  letter-spacing: 0.1em;
+}
+
+.new-post-heading {
+  height: 150px;
+  font-size: 40px;
+  font-weight: bold;
+  padding: 10px 20px;
+  margin-top: 20px;
+}
+
+.new-post-image-wrapper {
+  width: 100%;
+  height: 540px;
+  background-color: #d6d6d6;
+  margin-top: 30px;
+  position: relative;
+  overflow: hidden;
+}
+
+.new-post-image {
+  cursor: pointer;
+
+  opacity: 0;
+  font-size: 0;
+
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: $z-max - 9;
+}
+
+.new-post-image-button {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.new-post-image-preview {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding-top: percentage(540 / 1120);
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: $z-max - 8;
+}
+
+.new-post-content {
+  height: 395px;
+  font-size: 18px;
+  padding: 20px 25px;
+  margin-top: 35px;
+}
