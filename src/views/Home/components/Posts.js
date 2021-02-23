@@ -9,7 +9,6 @@ import PostLists from './PostLists';
 const Posts = () => {
   const [loading, setLoading] = useState(true);
   const [data, setData] = useState([]);
-  const [newPost, setNewPost] = useState({});
 
   const [visiblePosts, setVisiblePosts] = useState(6);
   const isLoggedIn = localStorage.getItem(AUTH_TOKEN);
@@ -20,14 +19,12 @@ const Posts = () => {
       setData(posts.data);
     }
 
-    if (posts && posts.new) {
-      setNewPost(posts.new);
-    }
-
     if (posts) {
       setLoading(posts.loading);
     }
   }, [posts]);
+
+  // console.log({posts})
 
   const handleLoadMoreClick = () => {
     setVisiblePosts(prevVisiblePosts => prevVisiblePosts + 6);
@@ -43,7 +40,7 @@ const Posts = () => {
       {!loading
         ? (
           <Fragment>
-            <PostLists newPost={newPost} data={data} visiblePosts={visiblePosts} />
+            <PostLists data={data} visiblePosts={visiblePosts} />
             <div className="posts-button">
               <Button
                 text="LOAD MORE"

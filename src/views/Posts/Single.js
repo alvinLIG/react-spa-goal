@@ -94,22 +94,24 @@ const Single = ({ ...props }) => {
               ))
             }
 
-            <form className="comment-form" onSubmit={handleSubmit}>
-              <textarea
-                className="comment-textarea"
-                placeholder="Write comment"
-                value={comment}
-                onChange={e => setComment(e.target.value)}
-              >
-              </textarea>
+            {isLoggedIn ? (
+              <form className="comment-form" onSubmit={handleSubmit}>
+                <textarea
+                  className="comment-textarea"
+                  placeholder="Write comment"
+                  value={comment}
+                  onChange={e => setComment(e.target.value)}
+                >
+                </textarea>
 
-              <div className="comment-button">
-                <Button
-                  text="Submit"
-                  type="submit"
-                />
-              </div>
-            </form>
+                <div className="comment-button">
+                  <Button
+                    text="Submit"
+                    type="submit"
+                  />
+                </div>
+              </form>
+            ) : <div style={{margin: 20, textAlign: 'center'}}>Login to add comment</div>}
           </div>
         </div>
       </div>

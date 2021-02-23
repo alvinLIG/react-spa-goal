@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
+import _ from 'lodash';
 import moment from 'moment';
 
 import { addSinglePost } from '../../../redux/modules/post/postActions';
@@ -29,13 +30,17 @@ const NewPost = () => {
     progress: undefined,
   });
 
-  // const newPost = useSelector((state) => state.post);
+  const newPost = useSelector((state) => state.post);
+  const dataLastID = _.head(Object.values(newPost.data))
+  const dataNewId = dataLastID !== undefined && dataLastID[Object.keys(dataLastID)[0]] + 1;
+  const newId = Object.keys(newPost.new).length !== 0 ? newPost.new[Object.keys(newPost.new)[0]] + 1 : dataNewId; 
+  console.log(newId);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     addPostHandler();
-    dispatch(addSinglePost(title, content, image))
-    history.push('/post');
+    dispatch(addSinglePost(title, content, image));
+    history.push('/post/' + newId);
   }
 
   const handleCancel = (e) => {
